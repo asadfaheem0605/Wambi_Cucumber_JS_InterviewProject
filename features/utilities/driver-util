@@ -1,0 +1,95 @@
+const { driver } = require('./driver');
+const { By, Key, until } = require('selenium-webdriver');
+
+const driverUtil = {};
+
+driverUtil.BY = {
+    XPATH: 'XPATH',
+    CSS: 'CSS',
+    SCRIPT: 'SCRIPT',
+    NAME: 'NAME'
+};
+
+driverUtil.WAIT = {
+    UNIT00: 250,
+    UNIT0: 500,
+    UNIT1: 1000,
+    UNIT2: 2000,
+    UNIT3: 3000,
+    UNIT4: 4000,
+    UNIT5: 5000,
+    UNIT6: 6000,
+    UNIT7: 7000,
+    UNIT8: 8000,
+    UNIT9: 9000,
+    UNIT10: 10000
+};
+
+driverUtil.find = async function (by) {
+    console.log('find:by', by);
+    return new Promise(async (resolve, reject) => {
+        await driver.findElement(by).then((ele) => {
+            resolve(ele);
+        });
+        reject(null);
+    });
+};
+
+driverUtil.click = async function (by) {
+    console.log('click:by', by);
+    await driverUtil.sleepDriver(driverUtil.WAIT.UNIT1);
+    await driver.findElement(by).then((ele) => {
+        ele.click();
+    });
+};
+
+driverUtil.text = function (by) {
+    console.log('text:by', by);
+    return new Promise(async (resolve, reject) => {
+        await driver.findElement(by).getText().then((text) => {
+            resolve(text);
+        });
+    });
+};
+
+driverUtil.clear = async function (by = null) {
+    console.log('sendKeys: by => ', by);
+    await driverUtil.sleepDriver(driverUtil.WAIT.UNIT1);
+    await driver.findElement(by).then((ele) => {
+        ele.clear();
+    });
+};
+
+driverUtil.sendKeys = async function (by = null, data = null) {
+    console.log('sendKeys: by, data => ', by, data);
+    await driverUtil.sleepDriver(driverUtil.WAIT.UNIT1);
+    await driver.findElement(by).then((ele) => {
+        ele.sendKeys(data);
+    });
+};
+
+
+driverUtil.sendEnter = async function (by) {
+    console.log('sendEnter:by', by);
+    await driverUtil.sleepDriver(driverUtil.WAIT.UNIT0);
+    await driver.findElement(by).sendKeys(Key.ENTER);
+};
+
+driverUtil.wait = async function (by) {
+    await driver.wait(until.elementLocated(by), 10000);
+};
+
+driverUtil.count = function (by) {
+    return new Promise(async (resolve, reject) => {
+        await driver.findElements(by).then((ele) => {
+            resolve(ele.length);
+        });
+        reject(null);
+    });
+};
+
+driverUtil.sleepDriver = async function (WAITFOR) {
+    await driver.sleep(WAITFOR);
+};
+
+module.exports = driverUtil;

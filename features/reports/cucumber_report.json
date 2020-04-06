@@ -1,0 +1,257 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Google Map",
+    "line": 1,
+    "id": "google-map",
+    "tags": [],
+    "uri": "features\\UI\\GoogleSearch_UI.feature",
+    "elements": [
+      {
+        "id": "google-map;validate-car-distance-on-google-maps",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Validate car distance on google maps",
+        "tags": [
+          {
+            "name": "@asad",
+            "line": 3
+          },
+          {
+            "name": "@google-maps-car",
+            "line": 3
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I go to Google Maps",
+            "match": {
+              "location": "features\\step_definitions\\GoogleMapSearchStepDef.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5262000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "I input source and destination in maps",
+            "match": {
+              "location": "features\\step_definitions\\GoogleMapSearchStepDef.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6931000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "I verify car distance in the maps",
+            "match": {
+              "location": "features\\step_definitions\\GoogleMapSearchStepDef.js:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2704000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "google-map;validate-walking-distance-on-google-maps",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "Validate walking distance on google maps",
+        "tags": [
+          {
+            "name": "@asad",
+            "line": 9
+          },
+          {
+            "name": "@google-maps-walk",
+            "line": 9
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "I go to Google Maps",
+            "match": {
+              "location": "features\\step_definitions\\GoogleMapSearchStepDef.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 612000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "I input source and destination in maps",
+            "match": {
+              "location": "features\\step_definitions\\GoogleMapSearchStepDef.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6528000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "I verify walking distance in the maps",
+            "match": {
+              "location": "features\\step_definitions\\GoogleMapSearchStepDef.js:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5672000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "google-map;validate-bicycle-distance-on-google-maps",
+        "keyword": "Scenario",
+        "line": 16,
+        "name": "Validate bicycle distance on google maps",
+        "tags": [
+          {
+            "name": "@asad",
+            "line": 15
+          },
+          {
+            "name": "@google-maps-bicycle",
+            "line": 15
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 17,
+            "name": "I go to Google Maps",
+            "match": {
+              "location": "features\\step_definitions\\GoogleMapSearchStepDef.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 306000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 18,
+            "name": "I input source and destination in maps",
+            "match": {
+              "location": "features\\step_definitions\\GoogleMapSearchStepDef.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6318000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "I verify bicycle distance and includes ferry in the maps",
+            "match": {
+              "location": "features\\step_definitions\\GoogleMapSearchStepDef.js:60"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5268000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "google-map;validate-flight-distance-on-google-maps",
+        "keyword": "Scenario",
+        "line": 22,
+        "name": "Validate flight distance on google maps",
+        "tags": [
+          {
+            "name": "@asad",
+            "line": 21
+          },
+          {
+            "name": "@google-maps-edge-case",
+            "line": 21
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 23,
+            "name": "I go to Google Maps",
+            "match": {
+              "location": "features\\step_definitions\\GoogleMapSearchStepDef.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 333000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 24,
+            "name": "I input source and destination in maps",
+            "match": {
+              "location": "features\\step_definitions\\GoogleMapSearchStepDef.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6072000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "I check flights information by clicking google flights",
+            "match": {
+              "location": "features\\step_definitions\\GoogleMapSearchStepDef.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6982000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 26,
+            "name": "I verify how forward a flight can be booked",
+            "match": {
+              "location": "features\\step_definitions\\GoogleMapSearchStepDef.js:75"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15630000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
